@@ -1,1 +1,76 @@
-{}
+trackSelection = true
+fetchPreview = true
+defaultFlags = 0
+keepOpen = false
+queryFolder = "Assets"
+onBoardingDoNotAskAgain = true
+showPackageIndexes = false
+showStatusBar = false
+scopes = {
+	"picker_window_position_offset.7E63D72B" = "1128;474;320;550"
+	"picker_search_text.7E63D72B" = ""
+	"last_search.7E63D72B" = ""
+	"OpenInspectorPreview.7E63D72B" = "0"
+	"currentGroup.7E63D72B" = "all"
+	"picker_window_position_offset.3172962C" = "1152;474;320;550"
+	"picker_search_text.3172962C" = ""
+	"last_search.3172962C" = ""
+	"OpenInspectorPreview.3172962C" = "0"
+	"currentGroup.3172962C" = "all"
+}
+providers = {
+	log = {
+		active = false
+		priority = 210
+		defaultAction = null
+	}
+	store = {
+		active = true
+		priority = 100
+		defaultAction = null
+	}
+	asset = {
+		active = true
+		priority = 25
+		defaultAction = null
+	}
+	scene = {
+		active = true
+		priority = 50
+		defaultAction = null
+	}
+	performance = {
+		active = false
+		priority = 100
+		defaultAction = null
+	}
+	packages = {
+		active = true
+		priority = 90
+		defaultAction = null
+	}
+	adb = {
+		active = false
+		priority = 2500
+		defaultAction = null
+	}
+	find = {
+		active = true
+		priority = 25
+		defaultAction = null
+	}
+}
+objectSelectors = {
+}
+recentSearches = [
+]
+searchItemFavorites = [
+]
+savedSearchesSortOrder = 0
+showSavedSearchPanel = false
+expandedQueries = [
+]
+queryBuilder = false
+ignoredProperties = "id;name;classname;imagecontentshash"
+helperWidgetCurrentArea = "all"
+disabledIndexers = ""
