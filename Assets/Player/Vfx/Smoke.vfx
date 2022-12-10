@@ -536,7 +536,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":-0.0010000000474974514,"y":0.0,"z":0.004999999888241291}}'
+      m_SerializableObject: '{"vector":{"x":-0.10000000149011612,"y":0.0,"z":0.5}}'
     m_Space: 0
   m_Property:
     name: A
@@ -706,7 +706,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":0.0010000000474974514,"y":0.0,"z":0.009999999776482582}}'
+      m_SerializableObject: '{"vector":{"x":0.10000000149011612,"y":0.0,"z":1.0}}'
     m_Space: 0
   m_Property:
     name: B
@@ -1398,7 +1398,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Position, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"position":{"x":-1.3940222309827278e-9,"y":-0.004683801904320717,"z":0.0012335951905697585}}'
+      m_SerializableObject: '{"position":{"x":-0.5,"y":0.0,"z":0.0}}'
     m_Space: 0
   m_Property:
     name: Position
@@ -2082,7 +2082,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.AnimationCurve, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"frames":[{"time":0.0,"value":0.149993896484375,"inTangent":0.0,"outTangent":0.0,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":0.4342212975025177,"value":0.3113219141960144,"inTangent":0.4888792634010315,"outTangent":0.4888792634010315,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":1.0,"value":1.0,"inTangent":2.6095950603485109,"outTangent":2.6095950603485109,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
+      m_SerializableObject: '{"frames":[{"time":0.0,"value":0.1108490526676178,"inTangent":0.0,"outTangent":0.0,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":0.5043976902961731,"value":0.30897319316864016,"inTangent":0.6304765939712524,"outTangent":0.6304765939712524,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":1.0,"value":1.0,"inTangent":2.1240549087524416,"outTangent":2.1240549087524416,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
     m_Space: 2147483647
   m_Property:
     name: Size
