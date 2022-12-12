@@ -7,6 +7,7 @@ public class Movements : MonoBehaviour
     public float jumpSpeed = 8;
     const float gravity = 9.8f;
     float vSpeed = 0f;
+    bool isCrouched = false;
 
     PlayerInputs inputActions;
     CharacterController characterController;
@@ -21,13 +22,34 @@ public class Movements : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Move();
-        ApplyGravity();
+        Vector3 moveInputs = inputActions.Movements.Move.ReadValue<Vector3>();
+        Crouch(moveInputs);
+        Move(moveInputs);
+        ApplyGravityAndJump(moveInputs);
     }
 
-    void ApplyGravity()
+    void Crouch(Vector3 moveInputs)
     {
-        Vector3 moves = inputActions.Movements.Move.ReadValue<Vector3>();
+        LayerMask mask = LayerMask.GetMask("Ground");
+        bool isCeilled = Physics.CheckBox(transform.position + Vector3.up, Vector3.one * 0.05f, Quaternion.identity, mask);
+
+        if (moveInputs.y < 0 && vSpeed <= 0.1f)
+        {
+            isCrouched = true;
+            animator.SetBool("Crouch", true);
+            characterController.height = 0.91f;
+            characterController.center = Vector3.up * 0.46f;
+        } else if (!isCeilled)
+        {
+            isCrouched = false;
+            animator.SetBool("Crouch", false);
+            characterController.height = 1.45f;
+            characterController.center = Vector3.up * 0.7f;
+        }
+    }
+
+    void ApplyGravityAndJump(Vector3 moveInputs)
+    {
         LayerMask mask = LayerMask.GetMask("Ground");
         bool isGrounded = Physics.CheckBox(transform.position, Vector3.one * 0.05f, Quaternion.identity, mask);
         bool isCeilled = Physics.CheckBox(transform.position + Vector3.up * 1.5f, Vector3.one * 0.05f, Quaternion.identity, mask);
@@ -43,7 +65,7 @@ public class Movements : MonoBehaviour
             //animator.SetBool("Grounded", true);
             animator.SetBool("Jump", false);
             vSpeed = 0; // grounded character has vSpeed = 0...
-            if (moves.y != 0)
+            if (moveInputs.y > 0 && !isCrouched)
             { // unless it jumps:
                 vSpeed = jumpSpeed;
             }
@@ -61,23 +83,22 @@ public class Movements : MonoBehaviour
         characterController.Move(vel * Time.deltaTime);
     }
 
-    void Move()
+    void Move(Vector3 moveInputs)
     {
-        Vector3 moves = inputActions.Movements.Move.ReadValue<Vector3>();
         Vector3 movement = Vector3.zero;
 
-        if (moves.x != 0)
+        if (moveInputs.x != 0)
         {
             animator.SetBool("Walk", true);
 
-            if (moves.x > 0)
+            if (moveInputs.x > 0)
             {
                 if (!Mathf.Round(transform.localEulerAngles.y).Equals(180f))
                 {
                     transform.Rotate(0, 180, 0, Space.Self);
                 }
             }
-            else if (moves.x < 0)
+            else if (moveInputs.x < 0)
             {
                 if (!Mathf.Round(transform.localEulerAngles.y).Equals(0f))
                 {
@@ -85,7 +106,7 @@ public class Movements : MonoBehaviour
                 }
             }
 
-            movement.x = moves.x;
+            movement.x = moveInputs.x;
         }
         else
         {
