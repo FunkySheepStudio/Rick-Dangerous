@@ -17,7 +17,7 @@ public class RollingBall : MonoBehaviour
     {
         if (active)
         {
-            rb.AddForce(direction * 10);
+            rb.AddForce(direction * 2, ForceMode.VelocityChange);
             active = false;
         }
     }
