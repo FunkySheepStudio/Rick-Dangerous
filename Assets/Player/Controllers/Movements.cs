@@ -65,7 +65,7 @@ public class Movements : MonoBehaviour
             //animator.SetBool("Grounded", true);
             animator.SetBool("Jump", false);
             vSpeed = 0; // grounded character has vSpeed = 0...
-            if (moveInputs.y > 0 && !isCrouched)
+            if (moveInputs.y > 0 && !isCrouched && !isCeilled)
             { // unless it jumps:
                 vSpeed = jumpSpeed;
             }
