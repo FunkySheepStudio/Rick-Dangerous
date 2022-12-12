@@ -3,9 +3,10 @@ using UnityEngine.InputSystem;
 
 public class Movements : MonoBehaviour
 {
+    public float speed = 5;
+    public float jumpSpeed = 8;
     const float gravity = 9.8f;
     float vSpeed = 0f;
-    float jumpSpeed = 10f;
 
     PlayerInputs inputActions;
     CharacterController characterController;
@@ -27,8 +28,17 @@ public class Movements : MonoBehaviour
     void ApplyGravity()
     {
         Vector3 moves = inputActions.Movements.Move.ReadValue<Vector3>();
+        LayerMask mask = LayerMask.GetMask("Ground");
+        bool isGrounded = Physics.CheckBox(transform.position, Vector3.one * 0.05f, Quaternion.identity, mask);
+        bool isCeilled = Physics.CheckBox(transform.position + Vector3.up * 1.5f, Vector3.one * 0.05f, Quaternion.identity, mask);
         Vector3 vel = Vector3.down;
-        if (characterController.isGrounded)
+
+        if (isCeilled)
+        {
+            vSpeed = 0;
+        }
+
+        if (isGrounded)
         {
             //animator.SetBool("Grounded", true);
             animator.SetBool("Jump", false);
@@ -82,6 +92,6 @@ public class Movements : MonoBehaviour
             animator.SetBool("Walk", false);
         }
 
-        characterController.Move(movement * Time.deltaTime);
+        characterController.Move(movement * Time.deltaTime * speed);
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028432, g: 0.22571549, b: 0.30692303, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028374, g: 0.22571473, b: 0.30692178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 390233946}
   - component: {fileID: 390233945}
   - component: {fileID: 390233944}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,16 +553,101 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8101031882308933689, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -7383185116288423260, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -4283331520770112078, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -2071856376345305108, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -682556323582878048, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -575907072804792078, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -219290562523837878, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 44683188108188758, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 64080ad9a15862845a99de046eab4d4f,
         type: 3}
       propertyPath: m_Name
       value: Rick_Fbx
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147027839027649750, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1468551188479771725, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2376791256923785790, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2712322255281106247, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 64080ad9a15862845a99de046eab4d4f,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: e34bc9277feca2144a8801cc58ea3b2d, type: 2}
+    - target: {fileID: 7036213049465896255, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081189092214352868, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8201287435493740232, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410206490488960910, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -624,6 +709,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69875225b1dde3941b9cf24bfabe2fe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  jumpSpeed: 8
 --- !u!1 &1384599569
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +722,7 @@ GameObject:
   - component: {fileID: 1384599570}
   - component: {fileID: 1384599572}
   - component: {fileID: 1384599571}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -791,7 +878,7 @@ GameObject:
   - component: {fileID: 1514793103}
   - component: {fileID: 1514793102}
   - component: {fileID: 1514793101}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
