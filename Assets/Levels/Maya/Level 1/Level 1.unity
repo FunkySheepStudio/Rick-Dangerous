@@ -234,7 +234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11693136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.996136, y: 0.9090637, z: 0.92943287}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1603,6 +1603,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1057562555}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 64080ad9a15862845a99de046eab4d4f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1057562560}
   m_SourcePrefab: {fileID: 100100000, guid: 64080ad9a15862845a99de046eab4d4f, type: 3}
 --- !u!1 &1057562554 stripped
 GameObject:
@@ -1656,6 +1660,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1057562553}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1057562560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057562554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca3aca39d6d7204b990ff6edf6705d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1062531499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2453,12 +2469,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c851cc01f576ca943b2a70a8f854ed95,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.14
+      value: 5.14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c851cc01f576ca943b2a70a8f854ed95,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.86
+      value: -7.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c851cc01f576ca943b2a70a8f854ed95,
         type: 3}
@@ -3111,6 +3127,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rolling Rock Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1499406518301763810, guid: d7732a3f79a91c849a1f362f75a976ca,
+        type: 3}
+      propertyPath: m_TagString
+      value: Death
+      objectReference: {fileID: 0}
     - target: {fileID: 1673749938163742658, guid: d7732a3f79a91c849a1f362f75a976ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3193,6 +3214,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6668134370148789813, guid: d7732a3f79a91c849a1f362f75a976ca,
         type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6668134370148789813, guid: d7732a3f79a91c849a1f362f75a976ca,
+        type: 3}
       propertyPath: m_Constraints
       value: 8
       objectReference: {fileID: 0}
@@ -3270,7 +3296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852077799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.79, y: 1.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

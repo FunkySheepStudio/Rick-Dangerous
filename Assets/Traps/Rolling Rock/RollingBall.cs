@@ -6,6 +6,7 @@ public class RollingBall : MonoBehaviour
 {
     public Vector3 direction;
     public bool active = false;
+    bool initialForce = false;
     Rigidbody rb;
 
     private void Awake()
@@ -17,8 +18,15 @@ public class RollingBall : MonoBehaviour
     {
         if (active)
         {
-            rb.AddForce(direction * 2, ForceMode.VelocityChange);
-            active = false;
+            if (!initialForce)
+            {
+                rb.velocity = direction;
+                //rb.AddForce(direction * 7, ForceMode.VelocityChange);
+                initialForce = true;
+            }
+
+            rb.velocity = rb.velocity.normalized * 5;
+            //active = false;
         }
     }
 }
